@@ -28,11 +28,12 @@ for ($i = 1;$i < $count; $i++)
 {
 	$tmp = array_column($arr, $i);
 	$flag = 0;
+	$flag2 = 0;
 	$flag_key = [];
 
 	foreach($tmp as $k => &$v)
 	{
-		if ($v == 100)
+		if ($v == 100 && $flag2 == 0)
 		{
 			$flag +=1; 
 			$flag_key[] = $k;
@@ -42,6 +43,7 @@ for ($i = 1;$i < $count; $i++)
 			$flag_key = [];
 		}
 		if ($flag > 3){
+			$flag = 1;
 			foreach($flag_key as $f){
 				$tmp[$f] = null;
 			}
