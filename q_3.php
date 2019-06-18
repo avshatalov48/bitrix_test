@@ -43,7 +43,7 @@ for ($i = 1;$i < $count; $i++)
 			$flag_key = [];
 		}
 		if ($flag > 3){
-			$flag = 1;
+			$flag2 = 1;
 			foreach($flag_key as $f){
 				$tmp[$f] = null;
 			}
